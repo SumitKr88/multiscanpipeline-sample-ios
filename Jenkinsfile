@@ -49,7 +49,6 @@ pipeline {
 
   post {
    success {
-     step([$class: 'StashNotifier'])
      office365ConnectorSend color: '#86BC25', status: currentBuild.result, webhookUrl: office365WebhookUrl
    }
   //  always {
@@ -57,7 +56,6 @@ pipeline {
   //      sh "swiftlint --strict"
   //  }
    failure {
-     step([$class: 'StashNotifier'])
      office365ConnectorSend color: '#ff0000', status: currentBuild.result, webhookUrl: office365WebhookUrl
    }
   }
