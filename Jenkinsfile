@@ -36,7 +36,7 @@ pipeline {
     }
     stage('Tests') {
       steps {
-        sh "xcodebuild -workspace AdManagerTest.xcworkspace -scheme AdManagerTestTests -sdk iphonesimulator -configuration \"Debug\" CODE_SIGN_IDENTITY=\"\" CODE_SIGNING_REQUIRED=NO CODE_SIGN_ENTITLEMENTS=\"\" CODE_SIGNING_ALLOWED=\"NO\" -destination \"platform=iOS Simulator,name=iPhone 11 Pro,OS=13.3\" test"
+        sh "xcodebuild -workspace AdManagerTest.xcworkspace -scheme AdManagerTestTests -sdk iphonesimulator -configuration \"Debug\" CODE_SIGN_IDENTITY=\"\" CODE_SIGNING_REQUIRED=NO CODE_SIGN_ENTITLEMENTS=\"\" CODE_SIGNING_ALLOWED=\"NO\" -destination \"platform=iOS Simulator,name=iPhone 8,OS=13.3\" test"
       }
     }
 }
