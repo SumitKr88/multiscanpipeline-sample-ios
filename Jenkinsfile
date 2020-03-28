@@ -16,11 +16,6 @@ pipeline {
   }
 
   stages {
-    stage('Checkout') {
-      steps {
-        step([$class: 'StashNotifier'])
-      }
-    }
 
     stage('Dot Files Check') {
       steps {
