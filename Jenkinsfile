@@ -29,7 +29,6 @@ pipeline {
         sh "xcodebuild -workspace AdManagerTest.xcworkspace -scheme AdManagerTest clean"
 
         // If you encounter a build error "errSecInternalComponent Command PhaseScriptExecution failed with a nonzero exit code" with your framework,
-        // uncomment the line below and as Reggie Fenton, Scott Kriss or Jesse Le for the Jenkins pw, run once with this unlock line.
         //sh "security unlock-keychain -p <password> login.keychain"
         //sh "xcodebuild -workspace Experience.xcworkspace -scheme Experience -sdk iphoneos -configuration \"Debug\" archive -archivePath ${WORKSPACE}/build/Experience.xcarchive"
         sh "xcodebuild -workspace AdManagerTest.xcworkspace -scheme AdManagerTest -sdk iphoneos -configuration \"Debug\" CODE_SIGN_IDENTITY=\"\" CODE_SIGNING_REQUIRED=NO CODE_SIGN_ENTITLEMENTS=\"\" CODE_SIGNING_ALLOWED=\"NO\" build"
