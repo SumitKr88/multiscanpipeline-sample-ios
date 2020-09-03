@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 //Figure out if we want a teams channel?
-def office365WebhookUrl = "https://outlook.office.com/webhook/a7a0122b-f23f-4ebe-bd15-dc6ab2e3ece8@36da45f1-dd2c-4d1f-af13-5abe46b99921/IncomingWebhook/cafdd0d730b14bfb8a50388090d41b3f/0038a58c-d45d-4c2e-a7f9-21e6106d1e98"
+def office365WebhookUrl = "INSERT_YOUR_WEB_HOOK_URL"
 
 pipeline {
   agent any
